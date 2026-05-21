@@ -28,96 +28,130 @@
     </header>
 
     <main>
-        <!-- Layer 2: Projects & Live Videos -->
         <section id="projects" class="section projects-section">
             <div class="container">
-                <h2 class="section-title">Projects & Live Benchmarks</h2>
-                <p class="section-intro">Detailed breakdown of my work in perception, navigation, and autonomy.</p>
+                <h2 class="section-title">Technical Projects & Research</h2>
+                <p class="section-intro">Selected work in robotic manipulation, perception, and autonomous navigation.</p>
                 
                 <div class="project-grid">
-                    <!-- Project 1: Perception -->
+                    <!-- Project 1: Visual Servoing -->
                     <div class="project-card large">
                         <div class="project-visual">
                             <div class="visual-overlay">
                                 <i class="fa-solid fa-play"></i>
                             </div>
                             <div class="img-placeholder">
-                                <span class="label">LIVE DEMO: Real-time Perception</span>
+                                <span class="label">LIVE DEMO: Franka Panda Manipulation</span>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Visual-Inertial SLAM Pipeline</h3>
+                            <h3>Franka Panda Visual Servoing</h3>
                             <div class="project-deep-dive">
                                 <h4>The Challenge</h4>
-                                <p>Autonomous drones struggle with precise localization in environments where GPS is unavailable or unreliable, leading to drift in navigation.</p>
+                                <p>Implementing precise pick-and-place tasks using an industrial robotic arm in dynamic environments where object positions are not fixed.</p>
                                 <h4>The Solution</h4>
-                                <p>I developed a robust SLAM pipeline that tightly couples IMU data with stereo vision features using an Extended Kalman Filter (EKF). This ensures sub-centimeter accuracy even during aggressive maneuvers.</p>
+                                <p>Developed a visual servoing pipeline in ROS 2 Humble. Integrated a camera with the Franka Panda manipulator to provide real-time feedback, enabling the arm to adjust its trajectory and grasp objects with high precision based on visual cues.</p>
                             </div>
                             <div class="project-tags">
-                                <span>C++</span><span>ROS 2</span><span>OpenCV</span><span>EKF</span><span>Sensor Fusion</span>
+                                <span>ROS 2 Humble</span><span>C++</span><span>MoveIt 2</span><span>OpenCV</span><span>Robotic Manipulation</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/ParagChourasia/portfolio" class="github-link"><i class="fa-brands fa-github"></i> Source Code</a>
-                                <a href="#" class="docs-link"><i class="fa-solid fa-book"></i> Architecture Diagram</a>
+                                <a href="https://github.com/ParagChourasia/Visual_servoing_pick_and_Place-" target="_blank" class="github-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                                <a href="https://www.youtube.com/@paragchourasia6814" target="_blank" class="docs-link"><i class="fa-brands fa-youtube"></i> Watch Demo</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2: Autonomy -->
+                    <!-- Project 2: 3D SLAM -->
                     <div class="project-card large">
                         <div class="project-visual">
                             <div class="visual-overlay">
                                 <i class="fa-solid fa-play"></i>
                             </div>
                             <div class="img-placeholder">
-                                <span class="label">DEMO: Autonomous Navigation</span>
+                                <span class="label">DEMO: 3D Reconstruction</span>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Dynamic Path Planning</h3>
+                            <h3>RTAB-Map SLAM & 3D Reconstruction</h3>
                             <div class="project-deep-dive">
                                 <h4>The Challenge</h4>
-                                <p>Navigating mobile robots in crowded spaces requires predicting human movement and planning paths that are both safe and efficient.</p>
+                                <p>Generating high-fidelity 3D maps of indoor and outdoor environments using a mobile robot platform (Husky) with limited sensor range.</p>
                                 <h4>The Solution</h4>
-                                <p>Integrated RRT* with a Dynamic Window Approach (DWA) in a ROS 2 Nav2 stack. The system updates its local costmap at 20Hz, allowing the robot to weave through moving obstacles without stopping.</p>
+                                <p>Implemented RTAB-Map (Real-Time Appearance-Based Mapping) for SLAM and 3D reconstruction. Processed synchronized RGB-D and LiDAR data to create dense point clouds and navigable occupancy grids for autonomous exploration.</p>
                             </div>
                             <div class="project-tags">
-                                <span>Python</span><span>ROS 2</span><span>Nav2</span><span>Gazebo</span><span>Path Planning</span>
+                                <span>ROS 2</span><span>RTAB-Map</span><span>Husky Robot</span><span>3D SLAM</span><span>LiDAR</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/ParagChourasia/portfolio" class="github-link"><i class="fa-brands fa-github"></i> Source Code</a>
-                                <a href="#" class="docs-link"><i class="fa-solid fa-book"></i> Video Analysis</a>
+                                <a href="https://github.com/ParagChourasia/RTAB-map_SLAM_Husky_3D_reconstruction" target="_blank" class="github-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                                <a href="#" class="docs-link"><i class="fa-solid fa-book"></i> Design Doc</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 3: Computer Vision -->
+                    <!-- Project 3: LiDAR SLAM -->
                     <div class="project-card large">
                         <div class="project-visual">
                             <div class="visual-overlay">
                                 <i class="fa-solid fa-play"></i>
                             </div>
                             <div class="img-placeholder">
-                                <span class="label">DEMO: Point Cloud Processing</span>
+                                <span class="label">DEMO: LiDAR-Inertial Fusion</span>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>LiDAR Object Detection</h3>
+                            <h3>LiDAR-Inertial SLAM (ROS 2)</h3>
                             <div class="project-deep-dive">
                                 <h4>The Challenge</h4>
-                                <p>Extracting 3D bounding boxes from sparse LiDAR point clouds in real-time for autonomous driving applications.</p>
+                                <p>Achieving stable localization for robots moving at high speeds or over uneven terrain where standard wheel odometry fails.</p>
                                 <h4>The Solution</h4>
-                                <p>Implemented an end-to-end 3D detection pipeline using PointNet++. Optimized the inference on NVIDIA Jetson hardware using CUDA and TensorRT, achieving 15 FPS on a low-power edge device.</p>
+                                <p>Integrated 3D LiDAR data with Inertial Measurement Unit (IMU) readings to perform robust SLAM. Optimized the fusion using a factor-graph-based approach, significantly reducing drift in feature-poor environments.</p>
                             </div>
                             <div class="project-tags">
-                                <span>PyTorch</span><span>Open3D</span><span>CUDA</span><span>Edge AI</span><span>NVIDIA Jetson</span>
+                                <span>C++</span><span>ROS 2 Humble</span><span>GTSAM</span><span>PCL</span><span>Sensor Fusion</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/ParagChourasia/portfolio" class="github-link"><i class="fa-brands fa-github"></i> Source Code</a>
-                                <a href="#" class="docs-link"><i class="fa-solid fa-chart-line"></i> Benchmark Results</a>
+                                <a href="https://github.com/ParagChourasia/3d_Lidar_SLAM_ROS2" target="_blank" class="github-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                                <a href="#" class="docs-link"><i class="fa-solid fa-chart-line"></i> Benchmarks</a>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project 4: Formation Control -->
+                    <div class="project-card large">
+                        <div class="project-visual">
+                            <div class="visual-overlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="img-placeholder">
+                                <span class="label">DEMO: Robot Swarms</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Leader-Follower Formation Control</h3>
+                            <div class="project-deep-dive">
+                                <h4>The Challenge</h4>
+                                <p>Coordinating multiple differential-drive robots to maintain a specific geometric formation while following a moving leader.</p>
+                                <h4>The Solution</h4>
+                                <p>Implemented a leader-follower control strategy using Lyapunov-based stability analysis. Each follower robot maintains its relative distance and angle to the leader, adapting dynamically to changes in the leader's velocity and direction.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span>Python</span><span>Robotics Control</span><span>Matlab/Simulink</span><span>Formation Control</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ParagChourasia/Leader-Follower-Formation-Control-main" target="_blank" class="github-link"><i class="fa-brands fa-github"></i> Source Code</a>
+                                <a href="#" class="docs-link"><i class="fa-solid fa-microchip"></i> Algorithm details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="all-projects-cta">
+                    <p>Want to see more of my technical work?</p>
+                    <a href="https://github.com/ParagChourasia?tab=repositories" target="_blank" class="btn primary">
+                        <i class="fa-brands fa-github"></i> View All 500+ Repositories
+                    </a>
                 </div>
             </div>
         </section>
