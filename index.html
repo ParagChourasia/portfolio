@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parag Chourasia | Robotics & Perception Engineer</title>
+    <title>Home | Parag Chourasia - Robotics Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,9 @@
         <nav class="container">
             <div class="logo">PC</div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects & Videos</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -28,7 +28,7 @@
     </header>
 
     <main>
-        <!-- Layer 1: About -->
+        <!-- Layer 1: Home / About Focus -->
         <section id="about" class="hero section">
             <div class="container">
                 <div class="hero-content">
@@ -36,6 +36,10 @@
                     <h2 class="tagline">Robotics & Perception Engineer</h2>
                     <p class="subtitle">Bridging the gap between abstract algorithms and physical motion. Specializing in SLAM, Computer Vision, and Autonomous Navigation.</p>
                     
+                    <div class="about-detailed">
+                        <p>I am a developer driven by the challenge of making machines perceive and interact with the physical world. My work focuses on building robust perception pipelines and navigation stacks that function reliably in complex, dynamic environments.</p>
+                    </div>
+
                     <div class="tech-stack">
                         <h3>Core Tech Stack</h3>
                         <div class="tech-grid">
@@ -51,110 +55,9 @@
                     </div>
                     
                     <div class="hero-btns">
-                        <a href="#projects" class="btn primary">Explore Projects</a>
-                        <a href="#" class="btn secondary"><i class="fa-solid fa-file-pdf"></i> Download Resume</a>
+                        <a href="projects.html" class="btn primary">View Projects</a>
+                        <a href="contact.html" class="btn secondary">Hire Me</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Layer 2: Projects & Live Videos -->
-        <section id="projects" class="section projects-section">
-            <div class="container">
-                <h2 class="section-title">Projects & Live Benchmarks</h2>
-                <div class="project-grid">
-                    <!-- Project 1: Perception -->
-                    <div class="project-card">
-                        <div class="project-visual">
-                            <!-- Placeholder for Video/GIF -->
-                            <div class="visual-overlay">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                            <div class="img-placeholder">
-                                <span class="label">LIVE DEMO: Real-time Perception</span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Visual-Inertial SLAM Pipeline</h3>
-                            <p class="project-description">A robust SLAM system integrating IMU data with stereo vision for precise localization in GPS-denied environments.</p>
-                            <div class="project-tags">
-                                <span>C++</span><span>ROS 2</span><span>OpenCV</span><span>EKF</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ParagChourasia/portfolio" class="github-link"><i class="fa-brands fa-github"></i> Code</a>
-                                <a href="#" class="docs-link"><i class="fa-solid fa-book"></i> Architecture</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Autonomy -->
-                    <div class="project-card">
-                        <div class="project-visual">
-                            <div class="visual-overlay">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                            <div class="img-placeholder">
-                                <span class="label">DEMO: Autonomous Navigation</span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Dynamic Path Planning</h3>
-                            <p class="project-description">Implementation of RRT* and DWA algorithms for a mobile robot navigating through crowded dynamic environments.</p>
-                            <div class="project-tags">
-                                <span>Python</span><span>ROS 2</span><span>Nav2</span><span>Gazebo</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ParagChourasia/portfolio" class="github-link"><i class="fa-brands fa-github"></i> Code</a>
-                                <a href="#" class="docs-link"><i class="fa-solid fa-book"></i> Architecture</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Computer Vision -->
-                    <div class="project-card">
-                        <div class="project-visual">
-                            <div class="visual-overlay">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                            <div class="img-placeholder">
-                                <span class="label">DEMO: Point Cloud Processing</span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>LiDAR Object Detection</h3>
-                            <p class="project-description">End-to-end 3D object detection pipeline using PointNet++ and VoxelNet on KITTI dataset.</p>
-                            <div class="project-tags">
-                                <span>PyTorch</span><span>Open3D</span><span>CUDA</span><span>C++</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/ParagChourasia/portfolio" class="github-link"><i class="fa-brands fa-github"></i> Code</a>
-                                <a href="#" class="docs-link"><i class="fa-solid fa-book"></i> Architecture</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Layer 3: Contact & Collaboration -->
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2 class="section-title">Connect & Collaborate</h2>
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <p>I'm currently looking for opportunities in Robotics, Computer Vision, and Autonomous Systems. Whether you have a question or just want to talk about robots, feel free to reach out!</p>
-                        <div class="social-links">
-                            <a href="mailto:paragchourasia@example.com"><i class="fa-solid fa-envelope"></i></a>
-                            <a href="https://github.com/ParagChourasia" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="btn primary">Send Transmission</button>
-                    </form>
                 </div>
             </div>
         </section>
