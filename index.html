@@ -17,12 +17,19 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
         </nav>
     </header>
@@ -30,33 +37,102 @@
     <main>
         <!-- Layer 1: Home / About Focus -->
         <section id="about" class="hero section">
+            <div class="robotic-arm-container">
+                <svg id="robot-arm-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+                    <!-- Base -->
+                    <circle cx="500" cy="950" r="30" class="arm-base" />
+                    <!-- Links and Joints will be injected or manipulated by JS -->
+                    <g id="arm-segments">
+                        <line id="link1" x1="500" y1="950" x2="500" y2="700" class="arm-link" />
+                        <line id="link2" x1="500" y1="700" x2="500" y2="450" class="arm-link" />
+                        <line id="link3" x1="500" y1="450" x2="500" y2="250" class="arm-link" />
+                        
+                        <circle id="joint1" cx="500" cy="950" r="12" class="arm-joint" />
+                        <circle id="joint2" cx="500" cy="700" r="10" class="arm-joint" />
+                        <circle id="joint3" cx="500" cy="450" r="8" class="arm-joint" />
+                        
+                        <!-- Gripper -->
+                        <g id="gripper" transform="translate(500, 250)">
+                            <path d="M -15 0 L -15 20 L -5 30" class="gripper-part" />
+                            <path d="M 15 0 L 15 20 L 5 30" class="gripper-part" />
+                            <circle cx="0" cy="0" r="6" class="arm-joint" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
             <div class="container">
-                <div class="hero-content">
-                    <h1 class="glitch" data-text="Parag Chourasia">Parag Chourasia</h1>
-                    <h2 class="tagline">Robotics & Perception Engineer</h2>
-                    <p class="subtitle">Bridging the gap between abstract algorithms and physical motion. Specializing in SLAM, Computer Vision, and Autonomous Navigation.</p>
-                    
-                    <div class="about-detailed">
-                        <p>I am a developer driven by the challenge of making machines perceive and interact with the physical world. My work focuses on building robust perception pipelines and navigation stacks that function reliably in complex, dynamic environments.</p>
-                    </div>
+                <div class="hero-main">
+                    <div class="hero-content">
+                        <h1 class="glitch" data-text="Parag Chourasia">Parag Chourasia</h1>
+                        <h2 class="tagline">Robotics & Perception Engineer</h2>
+                        <p class="subtitle">Bridging the gap between abstract algorithms and physical motion. Specializing in SLAM, Computer Vision, and Autonomous Navigation.</p>
+                        
+                        <div class="about-detailed">
+                            <p>I am a developer driven by the challenge of making machines perceive and interact with the physical world. My work focuses on building robust perception pipelines and navigation stacks that function reliably in complex, dynamic environments.</p>
+                        </div>
 
-                    <div class="tech-stack">
-                        <h3>Core Tech Stack</h3>
-                        <div class="tech-grid">
-                            <div class="tech-item" title="C++"><i class="fa-solid fa-code"></i><span>C++</span></div>
-                            <div class="tech-item" title="Python"><i class="fa-brands fa-python"></i><span>Python</span></div>
-                            <div class="tech-item" title="ROS 2"><i class="fa-solid fa-robot"></i><span>ROS 2</span></div>
-                            <div class="tech-item" title="OpenCV"><i class="fa-solid fa-eye"></i><span>OpenCV</span></div>
-                            <div class="tech-item" title="PyTorch"><i class="fa-solid fa-brain"></i><span>PyTorch</span></div>
-                            <div class="tech-item" title="CUDA"><i class="fa-solid fa-bolt"></i><span>CUDA</span></div>
-                            <div class="tech-item" title="Linux"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
-                            <div class="tech-item" title="LiDAR"><i class="fa-solid fa-satellite-dish"></i><span>LiDAR/RGB-D</span></div>
+                        <div class="tech-stack">
+                            <h3>Core Tech Stack</h3>
+                            <div class="tech-grid">
+                                <div class="tech-item" title="C++"><i class="fa-solid fa-code"></i><span>C++</span></div>
+                                <div class="tech-item" title="Python"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                                <div class="tech-item" title="ROS 2"><i class="fa-solid fa-robot"></i><span>ROS 2</span></div>
+                                <div class="tech-item" title="OpenCV"><i class="fa-solid fa-eye"></i><span>OpenCV</span></div>
+                                <div class="tech-item" title="PyTorch"><i class="fa-solid fa-brain"></i><span>PyTorch</span></div>
+                                <div class="tech-item" title="CUDA"><i class="fa-solid fa-bolt"></i><span>CUDA</span></div>
+                                <div class="tech-item" title="Linux"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+                                <div class="tech-item" title="LiDAR"><i class="fa-solid fa-satellite-dish"></i><span>LiDAR/RGB-D</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-btns">
+                            <a href="projects.html" class="btn primary">View Projects</a>
+                            <a href="contact.html" class="btn secondary">Hire Me</a>
                         </div>
                     </div>
-                    
-                    <div class="hero-btns">
-                        <a href="projects.html" class="btn primary">View Projects</a>
-                        <a href="contact.html" class="btn secondary">Hire Me</a>
+                    <div class="hero-image">
+                        <div class="image-frame">
+                            <img src="1000061998.jpg.jpeg" alt="Parag Chourasia Portrait">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission/Philosophy Section -->
+        <section class="mission-section">
+            <div class="mission-content container">
+                <h2>My Mission</h2>
+                <p>"To develop intelligent systems that don't just see the world, but understand it—creating a future where robotics and humanity collaborate seamlessly to solve the unsolvable."</p>
+            </div>
+        </section>
+
+        <!-- Dynamic Visual Gallery -->
+        <section class="visual-gallery">
+            <div class="container">
+                <h2 class="section-title">Visualizing Innovation</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <video autoplay loop muted playsinline>
+                            <source src="mpu_ros2_integration.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="gallery-overlay">MPU ROS 2 Integration</div>
+                    </div>
+                    <div class="gallery-item">
+                        <video autoplay loop muted playsinline>
+                            <source src="hand.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="gallery-overlay">Kinematic Precision</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJmZzR6NHJmZzR6NHJmZzR6NHJmZzR6NHJmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xoi6nNInuR9LMc/giphy.gif" alt="Computer Vision">
+                        <div class="gallery-overlay">Neural Perception</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJmZzR6NHJmZzR6NHJmZzR6NHJmZzR6NHJmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lTfWfJdF7S7fC8/giphy.gif" alt="Swarm Intelligence">
+                        <div class="gallery-overlay">Swarm Coordination</div>
                     </div>
                 </div>
             </div>
